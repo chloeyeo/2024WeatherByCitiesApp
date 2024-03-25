@@ -1,2 +1,2 @@
-deployed at:
+Deployed at:
 https://koreaweather.netlify.app/
