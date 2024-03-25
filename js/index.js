@@ -3,7 +3,8 @@ const weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather";
 let map, cities;
 let cityCount = 0;
 const params = {
-  appid: "2f5667655dbf20203376e75c1b0dba8d", // 4eedfeb184dc7cb08af6c0bd529c48b9
+  //2f5667655dbf20203376e75c1b0dba8d <- my original api key
+  appid: "4eedfeb184dc7cb08af6c0bd529c48b9", // 4eedfeb184dc7cb08af6c0bd529c48b9
   units: "metric", // for degrees C
   lang: "kr",
 };
