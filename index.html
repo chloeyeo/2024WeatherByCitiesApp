@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather By Cities</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
     <style>
       .layer {
         background-color: white;
@@ -12,10 +16,65 @@
         padding: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
+      html,
+      body {
+        border: 1px solid #000;
+        min-height: 100vh;
+        width: 100%;
+      }
+      /* body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      } */
+      ul,
+      li {
+        list-style: none;
+      }
+      .tabmenu > li.active {
+        background-color: skyblue;
+      }
+
+      .tabmenu > li {
+        padding: 10px 20px; /*y x*/
+        background: white;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid black;
+      }
+      .content {
+        border: 10px solid #5a0606;
+        width: 70%;
+        height: 80%;
+      }
+      .wrap {
+        border: 10px solid #000;
+        width: 100%;
+        /* height: 80%; */
+        height: 1000px; /* % and vh does not work, only px works! why?*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+      }
     </style>
   </head>
   <body>
-    <div id="map" style="width: 600px; height: 800px"></div>
+    <div class="wrap">
+      <ul class="nav tabmenu">
+        <li class="nav-item active">Cities</li>
+        <li class="nav-item location">Locate Me</li>
+        <li class="nav-item">Search</li>
+      </ul>
+      <div class="content">
+        <div id="map"></div>
+        <div id="myLocation">
+          <div id="myMap"></div>
+          <div id="roadview"></div>
+        </div>
+        <div id="search"></div>
+      </div>
+    </div>
 
     <script
       type="text/javascript"
